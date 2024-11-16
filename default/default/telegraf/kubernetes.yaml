@@ -1,0 +1,80 @@
+global:
+  namespace:
+    name: cicd-default
+  pool:
+    name: default
+    type: dmz
+  service:
+    name: telegraf
+  location:
+    name: default
+  ingress:
+    name: default
+  cluster:
+    name: default
+
+app:
+  agent:
+    prometheus_client:
+      listen: 10086
+
+k8s:
+  replicaCount: 3
+  chart:
+    chartVersion: 1.8.55
+  image:
+    repo: telegraf
+    tag: 1.32.1-alpine-cicd
+    meta:
+      pullPolicy: IfNotPresent
+  lastDeployTime: "2024-10-30T00:00:00Z"
+
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "250m"
+    limits:
+      memory: "128Mi"
+      cpu: "500m"
+
+  podAnnotations: {}
+
+  podLabels: {}
+
+  imagePullSecrets: []
+
+  prometheus_client:
+    listen: 10086
+
+  args: []
+
+  env:
+    - name: HOSTNAME
+      value: "999999999"
+
+  nodeSelector: {}
+
+  affinity: {}
+
+  tolerations: []
+
+  updateStrategy: {}
+
+  service:
+    enabled: true
+    type: ClusterIP
+    annotations: {}
+
+  rbac:
+    create: false
+    clusterWide: false
+    rules: []
+
+  serviceAccount:
+    create: false
+    name:
+    annotations: {}
+
+  pdb:
+    create: true
+    minAvailable: 1

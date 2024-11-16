@@ -1,0 +1,7 @@
+location:
+  kafka_delete:
+    host: "www.taobao.com"
+    port: "80"
+  elasticsearch_delete:
+    host: "www.jd.com"
+    port: "80"

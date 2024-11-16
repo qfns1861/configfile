@@ -1,0 +1,31 @@
+env:
+  canary: true
+  filebeat: false
+  elasticsearch: false
+global:
+  namespace:
+    name: cic-hf01
+  pool:
+    name: hf01
+    type: dmz
+  service:
+    name: telegraf
+  location:
+    name: hf
+  ingress:
+    name: hf01
+  cluster:
+    name: hf01
+k8s:
+  replicaCount: 5
+  chart:
+    chartVersion: 1.8.55
+  image:
+    repo: telegraf
+    tag: 1.32.1-alpine-cicd
+    meta:
+      pullPolicy: IfNotPresent
+  lastDeployTime: "2024-10-30T00:00:00Z"
+  pastDeploytime: "2024-10-15T00:00:00Z"
+  prometheus_client:
+    listen: 9273

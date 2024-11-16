@@ -1,0 +1,12 @@
+app:
+  agent:
+    prometheus_client:
+      listen: 10086
+  net_response:
+    enabled: true
+    services:
+      - prosgresql
+      - redis
+      - prometheus
+      - elasticsearch_delete
+      - kafka_delete

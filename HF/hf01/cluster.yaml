@@ -1,0 +1,15 @@
+env:
+  cluster: hf01
+  clusterName: dmz-hf01
+  clusterType: dmz
+  clusterNumber: 2
+  status: true
+  namespace: hf01
+  zabbix: false
+  nginx-ingress: false
+  k8sVersion: 1.23
+  timeZone: utc
+  kafka: true
+  canary: false
+  filebeat: true
+  elasticsearch: true

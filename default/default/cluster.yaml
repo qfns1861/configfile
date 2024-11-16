@@ -1,0 +1,19 @@
+env:
+  cluster: default
+  clusterName: default
+  clusterType: dmz
+  clusterNumber: 1
+  status: true
+  namespace: default
+  prosgresql: true
+  mysql: false
+  redis: true
+  mongodb: false
+  istio: true
+  prometheus: true
+cluster:
+  interIps:
+  - 10.0.0.1
+  dns: siyi.cicd.com
+  application:
+  - telegraf

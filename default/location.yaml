@@ -1,0 +1,16 @@
+location:
+  prosgresql:
+    host: "www.baidu.com"
+    port: "80"
+  redis:
+    host: "www.hao123.com"
+    port: "80"
+  prometheus:
+    host: "cn.bing.com"
+    port: "80"
+  kafka:
+    host: "www.taobao.com"
+    port: "80"
+  elasticsearch:
+    host: "www.jd.com"
+    port: "80"
