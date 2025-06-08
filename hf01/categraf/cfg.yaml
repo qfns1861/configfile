@@ -1,0 +1,18 @@
+app:
+  cpu:
+    percpu: true
+    totalcpu: true
+    collect_cpu_time: false
+    report_active: true
+    core_tags: true
+  agent:
+    prometheus_client:
+      listen: 9273
+  net_response:
+    enabled: true
+    services:
+      - prosgresql
+      - redis
+      - prometheus
+      - elasticsearch
+      - kafka

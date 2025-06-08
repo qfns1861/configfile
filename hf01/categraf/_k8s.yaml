@@ -1,15 +1,16 @@
+
 env:
   canary: true
   filebeat: false
   elasticsearch: false
 global:
-  namespace:
-    name: cic-hf01
+  name: categraf
+  namespace: categraf
   pool:
     name: hf01
     type: dmz
   service:
-    name: telegraf
+    name: categraf
   location:
     name: hf
   ingress:
@@ -21,7 +22,7 @@ k8s:
   chart:
     chartVersion: 1.8.55
   image:
-    repo: telegraf
+    repo: categraf
     tag: 1.32.1-alpine-cicd
     meta:
       pullPolicy: IfNotPresent
