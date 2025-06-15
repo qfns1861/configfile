@@ -1,4 +1,4 @@
-app:
+cfg:
   agent:
     prometheus_client:
       listen: 10086

@@ -1,33 +1,28 @@
-global:
-  name: telegraf
+argo:
+  app: categraf
   namespace: default
-  pool:
-    name: default
-    type: dmz
-  service:
-    name: telegraf
+  type: default
   location:
     name: default
   ingress:
     name: default
   cluster:
     name: default
-
-app:
-  agent:
-    prometheus_client:
-      listen: 10086
+  service:
+    name: categraf
+  chart: categraf
+  chartVersion: default
+  chartrepo: http://10.224.76.25:30380
+  server：https://kubernetes.default.svc
+  lastDeployTime: "2024-10-30T00:00:00Z"
 
 k8s:
-  replicaCount: 3
-  chart:
-    chartVersion: 1.8.55
+  replicaCount: 1
   image:
     repo: telegraf
     tag: 1.32.1-alpine-cicd
     meta:
       pullPolicy: IfNotPresent
-  lastDeployTime: "2024-10-30T00:00:00Z"
 
   resources:
     requests:

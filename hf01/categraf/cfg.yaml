@@ -1,4 +1,4 @@
-app:
+cfg:
   cpu:
     percpu: true
     totalcpu: true
