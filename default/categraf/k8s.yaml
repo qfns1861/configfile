@@ -13,7 +13,7 @@ argo:
   chart: categraf
   chartVersion: default
   chartrepo: http://10.224.76.25:30380
-  server：https://kubernetes.default.svc
+  server: https://kubernetes.default.svc
   lastDeployTime: "2024-10-30T00:00:00Z"
 
 k8s:

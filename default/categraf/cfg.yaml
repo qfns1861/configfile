@@ -11,8 +11,8 @@ cfg:
   net_response:
     enabled: true
     services:
-      - prosgresql
-      - redis
-      - prometheus
-      - elasticsearch
-      - kafka
+      prosgresql: {}
+      redis: {}
+      prometheus: {}
+      elasticsearch: {}
+      kafka: {}
